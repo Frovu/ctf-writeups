@@ -1,7 +1,7 @@
 # investigation_encoded_1
 Forensics, 450 points
 
-## Diclaimer:
+## Disclaimer:
 This is not optimal solution, its more like to demonstrate my own learning experience.
 
 ## Description:
@@ -95,9 +95,9 @@ void save(byte param_1)
 }
 ```
 
-Somewhere at this point I got confused by all the bit shifts and thought the decompilation tries to fool me, so I decided to open it with `radare2 (Cutter)` and reimplement functions in python from asssembly, to fully understand what they do. Yes its really slow but I was solving this for fun much time after ctf ended.
+Somewhere at this point I got confused by all the bit shifts and thought the decompilation tries to fool me, so I decided to open it with `radare2 (Cutter)` and reimplement functions in python from assembly, to fully understand what they do. Yes its really slow but I was solving this for fun much time after ctf ended.
 
-I got the `secret` and `matrix` globals values from memory dump, but before writing this checked the other writeup of this challege and learned very cool method of dumping c arrays from memory with `radare2`:
+I got the `secret` and `matrix` globals values from memory dump, but before writing this checked the other writeup of this challenge and learned very cool method of dumping c arrays from memory with `radare2`:
 
 ```perl
 [0x000007c0]> bf obj.secret
